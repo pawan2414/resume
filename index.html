@@ -45,38 +45,20 @@
     overflow: hidden;
   }
   header {
-    display: grid;
-    grid-template-columns: 1fr 180px;
-    gap: 20px;
-    align-items: center;
     padding: 40px 44px 28px;
     border-bottom: 4px solid var(--accent);
   }
-  .identity h1 {
+  header h1 {
     margin: 0;
     font-size: 2.6rem;
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
-  .doc-title {
+  header .doc-title {
     margin: 6px 0 0;
     color: var(--muted);
     font-size: 1rem;
-  }
-  .profile-photo-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--accent);
-    background: var(--accent-soft);
-    box-shadow: 0 8px 20px rgba(15, 92, 110, 0.12);
   }
   .contact {
     display: flex;
@@ -162,12 +144,6 @@
     body { padding: 0; }
     .sheet { border-radius: 0; border-left: 0; border-right: 0; }
     header, main, aside, .declaration { padding-left: 20px; padding-right: 20px; }
-    header {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .profile-photo-wrap { order: -1; }
-    .contact { justify-content: center; }
     header h1 { font-size: 2.1rem; }
     .body { grid-template-columns: 1fr; }
     aside { border-left: 0; border-top: 1px solid var(--line); }
@@ -185,17 +161,12 @@
 <body>
 <article class="sheet">
   <header>
-    <div class="identity">
-      <h1>Pawan Tank</h1>
-      <p class="doc-title">Curriculum Vitae</p>
-      <ul class="contact">
-        <li><span>Email</span><a href="mailto:pawantank5551@gmail.com">pawantank5551@gmail.com</a></li>
-        <li><span>Mobile</span><a href="tel:+917372943951">7372943951</a></li>
-      </ul>
-    </div>
-    <div class="profile-photo-wrap">
-      <img class="profile-photo" src="assets/profile-photo.svg" alt="Pawan Tank profile photo" />
-    </div>
+    <h1>Pawan Tank</h1>
+    <p class="doc-title">Curriculum Vitae</p>
+    <ul class="contact">
+      <li><span>Email</span><a href="mailto:pawantank5551@gmail.com">pawantank5551@gmail.com</a></li>
+      <li><span>Mobile</span><a href="tel:+917372943951">7372943951</a></li>
+    </ul>
   </header>
 
   <div class="body">
