@@ -3,266 +3,514 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pawan Tank – Curriculum Vitae</title>
+<title>Pawan Tank – Professional Resume</title>
 <style>
-  :root {
-    --ink: #1c2530;
-    --muted: #5b6673;
-    --accent: #0f5c6e;
-    --accent-soft: #e4f0f3;
-    --line: #d5dde2;
-    --paper: #ffffff;
-    --page: #eef2f4;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --ink: #e6ecf0;
-      --muted: #9aa7b3;
-      --accent: #5fc0d4;
-      --accent-soft: #18323a;
-      --line: #2e3a44;
-      --paper: #151c22;
-      --page: #0d1216;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { height: 100%; }
-  body {
+  * {
     margin: 0;
-    background: var(--page);
-    color: var(--ink);
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.55;
-    padding: 32px 16px;
+    padding: 0;
+    box-sizing: border-box;
   }
-  .sheet {
-    max-width: 920px;
+
+  :root {
+    --primary: #0f5c6e;
+    --primary-light: #5fc0d4;
+    --secondary: #1c2530;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --accent: #ff6b6b;
+    --border: #e0e6ed;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 900px;
     margin: 0 auto;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 6px;
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
-  header {
-    padding: 40px 44px 28px;
-    border-bottom: 4px solid var(--accent);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.6rem;
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-  header .doc-title {
-    margin: 6px 0 0;
-    color: var(--muted);
-    font-size: 1rem;
-  }
-  .contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 28px;
-    margin: 18px 0 0;
-    padding: 0;
-    list-style: none;
-  }
-  .contact a { color: var(--accent); text-decoration: none; font-weight: 600; }
-  .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
-  .contact span { color: var(--muted); margin-right: 6px; }
 
-  .body {
+  /* Header Section */
+  .header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 40px;
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 150px;
+    gap: 30px;
+    align-items: center;
   }
-  main { padding: 28px 44px 40px; }
-  aside {
-    padding: 28px 32px 40px;
-    background: var(--accent-soft);
-    border-left: 1px solid var(--line);
+
+  .header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    font-weight: 700;
   }
+
+  .header-content .title {
+    font-size: 1.1rem;
+    color: var(--primary-light);
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    border: 4px solid var(--primary-light);
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+
+  .contact-item a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+
+  .contact-item a:hover {
+    opacity: 0.8;
+  }
+
+  /* Main Content */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .main {
+    flex: 1;
+  }
+
+  .sidebar {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 35px;
+  }
+
   h2 {
-    margin: 0 0 12px;
-    font-size: 1.15rem;
-    color: var(--accent);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--primary);
     font-weight: 700;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--line);
-  }
-  section + section { margin-top: 30px; }
-  p { margin: 0; }
-
-  .timeline { list-style: none; margin: 0; padding: 0; }
-  .timeline li {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 14px;
-    padding: 10px 0;
-    border-top: 1px dashed var(--line);
-  }
-  .timeline li:first-child { border-top: 0; padding-top: 0; }
-  .timeline .year { font-weight: 700; color: var(--accent); }
-  .timeline .what { margin: 0; }
-  .timeline .where { color: var(--muted); font-size: 0.93rem; }
-
-  .plain { margin: 0; padding-left: 20px; }
-  .plain li { margin: 4px 0; }
-
-  .job { padding: 10px 0; border-top: 1px dashed var(--line); }
-  .job:first-of-type { border-top: 0; padding-top: 0; }
-  .job strong { display: block; }
-  .job .duration { color: var(--muted); font-size: 0.93rem; }
-
-  dl { margin: 0; }
-  dt { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
-  dt:first-child { margin-top: 0; }
-  dd { margin: 0; font-weight: 600; }
-
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-  .tags li {
-    border: 1px solid var(--accent);
-    color: var(--ink);
-    border-radius: 999px;
-    padding: 2px 12px;
-    font-size: 0.92rem;
-    background: var(--paper);
   }
 
-  .declaration { border-top: 1px solid var(--line); padding: 24px 44px 32px; }
-  .declaration p { color: var(--muted); max-width: 70ch; }
-  .sign {
+  .section-content h3 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  .section-content h3:first-child {
+    margin-top: 0;
+  }
+
+  .duration {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .company-name {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin: 8px 0 15px 0;
+  }
+
+  /* Objective */
+  .objective-text {
+    background: linear-gradient(to right, var(--primary-light), var(--primary));
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--primary);
+  }
+
+  .timeline-item:last-child::after {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    width: 2px;
+    height: calc(100% + 15px);
+    background: var(--border);
+  }
+
+  .timeline-item .year {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  .timeline-item .school {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 3px;
+  }
+
+  /* Skills Tags */
+  .skills-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 28px;
+    gap: 10px;
+    margin-top: 15px;
   }
-  .sign .name { font-weight: 700; }
 
-  @media (max-width: 760px) {
-    body { padding: 0; }
-    .sheet { border-radius: 0; border-left: 0; border-right: 0; }
-    header, main, aside, .declaration { padding-left: 20px; padding-right: 20px; }
-    header h1 { font-size: 2.1rem; }
-    .body { grid-template-columns: 1fr; }
-    aside { border-left: 0; border-top: 1px solid var(--line); }
-    .timeline li { grid-template-columns: 56px 1fr; }
+  .skill-tag {
+    background: var(--primary);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
   }
+
+  .skill-tag:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  /* Sidebar */
+  .sidebar h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+  }
+
+  .info-list {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+
+  .info-list li {
+    margin-bottom: 12px;
+  }
+
+  .info-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .info-value {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    margin-top: 3px;
+  }
+
+  /* Download Button */
+  .download-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 92, 110, 0.3);
+  }
+
+  .download-btn::before {
+    content: '⬇';
+    font-size: 1.2rem;
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--bg-light);
+    padding: 20px 40px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+    }
+
+    .profile-photo {
+      margin: 0 auto;
+    }
+
+    .content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+
+    .sidebar {
+      position: static;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
+
   @media print {
-    body { background: #fff; padding: 0; color: #000; }
-    .sheet { border: 0; max-width: none; }
-    :root { --paper: #fff; --ink: #000; --muted: #444; --accent: #0f5c6e; --accent-soft: #e4f0f3; --line: #ccc; }
-    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    section, .job, .timeline li { break-inside: avoid; }
+    body {
+      background: white;
+      padding: 0;
+    }
+
+    .container {
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    .download-btn {
+      display: none;
+    }
   }
 </style>
 </head>
 <body>
-<article class="sheet">
-  <header>
-    <h1>Pawan Tank</h1>
-    <p class="doc-title">Curriculum Vitae</p>
-    <ul class="contact">
-      <li><span>Email</span><a href="mailto:pawantank5551@gmail.com">pawantank5551@gmail.com</a></li>
-      <li><span>Mobile</span><a href="tel:+917372943951">7372943951</a></li>
-    </ul>
-  </header>
 
-  <div class="body">
-    <main>
-      <section>
-        <h2>Career objective</h2>
-        <p>To build my own identity by utilizing my knowledge, skills and abilities so as to do excellent in my work field.</p>
-      </section>
-
-      <section>
-        <h2>Work experience</h2>
-        <div class="job">
-          <strong>Vanshika Enterprises</strong>
-          <span class="duration">2 years of experience</span>
-        </div>
-        <div class="job">
-          <strong>Star Agri Infrastructure Pvt. Ltd., Jaipur</strong>
-          <span class="duration">1.6 years of experience</span>
-        </div>
-      </section>
-
-      <section>
-        <h2>Academic qualifications</h2>
-        <ul class="timeline">
-          <li>
-            <span class="year">2019</span>
-            <p class="what">High School<br><span class="where">Ajmer Board, Rajasthan</span></p>
-          </li>
-          <li>
-            <span class="year">2021</span>
-            <p class="what">Intermediate<br><span class="where">Ajmer Board, Rajasthan</span></p>
-          </li>
-          <li>
-            <span class="year">&ndash;</span>
-            <p class="what">B.A.<br><span class="where">Rajasthan University, Rajasthan</span></p>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Professional qualification</h2>
-        <ul class="timeline">
-          <li>
-            <span class="year">2023</span>
-            <p class="what">ITI in COPA (Computer Operator and Programming Assistant)<br><span class="where">NCVT (Raj)</span></p>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Technical qualification</h2>
-        <ul class="plain">
-          <li>RS-CIT Computer Course + Teaching Guidance (1 year), VMOU, Kota, Rajasthan</li>
-          <li>Advance Excel</li>
-        </ul>
-      </section>
-    </main>
-
-    <aside>
-      <section>
-        <h2>Strengths</h2>
-        <ul class="tags">
-          <li>Effective communication skills</li>
-          <li>Self-motivated resource</li>
-          <li>Hard working</li>
-          <li>Fast learner</li>
-          <li>Co-operative</li>
-          <li>Punctuality &amp; regularity</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Personal profile</h2>
-        <dl>
-          <dt>Father's name</dt><dd>Mr. Mahendra Tank</dd>
-          <dt>Date of birth</dt><dd>06 January 2004</dd>
-          <dt>Sex</dt><dd>Male</dd>
-          <dt>Marital status</dt><dd>Unmarried</dd>
-          <dt>Nationality</dt><dd>Indian</dd>
-          <dt>Languages known</dt><dd>Hindi &amp; English</dd>
-          <dt>Permanent address</dt>
-          <dd>Town: Shahpura<br>Distt.: Jaipur (Rajasthan)<br>Pin: 303103</dd>
-        </dl>
-      </section>
-    </aside>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-content">
+      <h1>Pawan Tank</h1>
+      <div class="title">Professional Resume</div>
+      <div class="contact-info">
+        <div class="contact-item">✉️ <a href="mailto:pawantank5551@gmail.com">pawantank5551@gmail.com</a></div>
+        <div class="contact-item">📱 <a href="tel:+917372943951">+91 7372943951</a></div>
+        <div class="contact-item">📍 Shahpura, Jaipur, Rajasthan</div>
+      </div>
+    </div>
+    <img src="https://via.placeholder.com/150/667eea/ffffff?text=Photo" alt="Pawan Tank" class="profile-photo">
   </div>
 
-  <footer class="declaration">
-    <h2>Declaration</h2>
-    <p>I hereby declare that the above information is correct to the best of my knowledge and as per college record.</p>
-    <div class="sign">
-      <span>Date:</span>
-      <span>Place:</span>
-      <span class="name">Pawan Tank</span>
+  <!-- Main Content -->
+  <div class="content">
+    <div class="main">
+      <!-- Career Objective -->
+      <section>
+        <h2>Career Objective</h2>
+        <div class="objective-text">
+          Dedicated and results-driven professional seeking to build a strong identity in a dynamic work environment. Committed to leveraging expertise, technical skills, and interpersonal abilities to contribute meaningfully to organizational success and personal growth.
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section>
+        <h2>Work Experience</h2>
+        <div class="section-content">
+          <div style="margin-bottom: 25px;">
+            <h3><span class="company-name">Vanshika Enterprises</span></h3>
+            <div class="duration">📅 2 Years of Experience</div>
+            <p class="description">Gained comprehensive experience in enterprise operations and business processes.</p>
+          </div>
+          <div>
+            <h3><span class="company-name">Star Agri Infrastructure Pvt. Ltd.</span></h3>
+            <div class="duration">📅 1.6 Years of Experience • Jaipur</div>
+            <p class="description">Contributed to agricultural infrastructure development with focus on operations and coordination.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="year">2023</div>
+            <strong>ITI in COPA</strong>
+            <div class="school">Computer Operator and Programming Assistant • NCVT (Raj)</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2021</div>
+            <strong>Intermediate</strong>
+            <div class="school">Ajmer Board, Rajasthan</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2019</div>
+            <strong>High School</strong>
+            <div class="school">Ajmer Board, Rajasthan</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">In Progress</div>
+            <strong>Bachelor of Arts (B.A.)</strong>
+            <div class="school">Rajasthan University, Rajasthan</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Skills -->
+      <section>
+        <h2>Technical Skills & Certifications</h2>
+        <div class="section-content">
+          <h3>Certifications</h3>
+          <ul style="margin-left: 20px; color: var(--text-dark);">
+            <li>RS-CIT Computer Course + Teaching Guidance (1 year) - VMOU, Kota, Rajasthan</li>
+            <li>Advanced Excel Proficiency</li>
+          </ul>
+          <h3 style="margin-top: 15px;">Core Competencies</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Computer Operations</span>
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">Advanced Excel</span>
+            <span class="skill-tag">Data Management</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Communication</span>
+          </div>
+        </div>
+      </section>
     </div>
-  </footer>
-</article>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Key Strengths</h3>
+      <div class="skills-list" style="flex-direction: column; gap: 8px; margin-top: 0;">
+        <span class="skill-tag">Effective Communication</span>
+        <span class="skill-tag">Self-Motivated</span>
+        <span class="skill-tag">Hard Working</span>
+        <span class="skill-tag">Fast Learner</span>
+        <span class="skill-tag">Cooperative</span>
+        <span class="skill-tag">Punctuality</span>
+      </div>
+
+      <h3 style="margin-top: 30px;">Personal Information</h3>
+      <ul class="info-list">
+        <li>
+          <div class="info-label">Father's Name</div>
+          <div class="info-value">Mr. Mahendra Tank</div>
+        </li>
+        <li>
+          <div class="info-label">Date of Birth</div>
+          <div class="info-value">06 January 2004</div>
+        </li>
+        <li>
+          <div class="info-label">Gender</div>
+          <div class="info-value">Male</div>
+        </li>
+        <li>
+          <div class="info-label">Marital Status</div>
+          <div class="info-value">Unmarried</div>
+        </li>
+        <li>
+          <div class="info-label">Nationality</div>
+          <div class="info-value">Indian</div>
+        </li>
+        <li>
+          <div class="info-label">Languages</div>
+          <div class="info-value">Hindi, English</div>
+        </li>
+      </ul>
+
+      <button class="download-btn" onclick="window.print()">Download PDF</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2024 Pawan Tank. All rights reserved. | Last Updated: October 2024</p>
+  </div>
+</div>
+
+<script>
+  // Download PDF functionality
+  document.querySelector('.download-btn').addEventListener('click', function() {
+    window.print();
+  });
+</script>
+
 </body>
 </html>
