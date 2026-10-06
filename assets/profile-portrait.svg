@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Passport portrait of Pawan Tank">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#e7d9cd"/>
+      <stop offset="100%" stop-color="#d8c5b6"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6f6f6"/>
+      <stop offset="100%" stop-color="#e7e7e7"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4c8a8"/>
+      <stop offset="100%" stop-color="#dca57b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" fill="url(#bg)"/>
+
+  <!-- shirt -->
+  <path d="M210 810 L150 520 C140 470 180 430 230 428 L490 428 C540 430 580 470 570 520 L510 810 Z" fill="url(#shirt)"/>
+  <path d="M265 440 L350 520 L435 440" fill="none" stroke="#d0d0d0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M307 430 L327 486 L393 486 L413 430" fill="none" stroke="#d7d7d7" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="360" cy="622" r="20" fill="#f7f7f7"/>
+  <path d="M322 620 L360 670 L398 620" fill="none" stroke="#e3e3e3" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- neck -->
+  <rect x="318" y="430" width="84" height="70" rx="30" fill="#d8a47b"/>
+
+  <!-- hair -->
+  <path d="M245 340 C250 220, 315 170, 360 170 C420 170, 485 220, 490 340 L495 390 C430 385, 380 370, 360 370 C335 370, 290 385, 245 390 Z" fill="#1e1f24"/>
+  <path d="M250 350 C280 255, 330 220, 360 220 C390 220, 445 255, 470 350" fill="none" stroke="#2a2b30" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- face -->
+  <ellipse cx="360" cy="360" rx="150" ry="190" fill="url(#skin)"/>
+
+  <!-- ears -->
+  <ellipse cx="210" cy="360" rx="22" ry="34" fill="#d6a37a"/>
+  <ellipse cx="510" cy="360" rx="22" ry="34" fill="#d6a37a"/>
+
+  <!-- eyebrows -->
+  <path d="M260 290 Q300 272 330 288" fill="none" stroke="#2b1d18" stroke-width="8" stroke-linecap="round"/>
+  <path d="M390 288 Q420 272 460 290" fill="none" stroke="#2b1d18" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <ellipse cx="300" cy="338" rx="16" ry="10" fill="#2b1d18"/>
+  <ellipse cx="420" cy="338" rx="16" ry="10" fill="#2b1d18"/>
+  <circle cx="305" cy="334" r="3.5" fill="#fff"/>
+  <circle cx="425" cy="334" r="3.5" fill="#fff"/>
+
+  <!-- nose -->
+  <path d="M360 326 Q372 370 360 390" fill="none" stroke="#c98f68" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- moustache -->
+  <path d="M285 455 Q340 490 360 475 Q385 490 435 455" fill="none" stroke="#2a1f1c" stroke-width="18" stroke-linecap="round"/>
+  <path d="M286 463 Q348 498 360 488 Q372 498 434 463" fill="none" stroke="#2a1f1c" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- lips -->
+  <path d="M320 500 Q360 525 400 500" fill="none" stroke="#9d4f4f" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- chin shadow -->
+  <path d="M288 515 Q360 550 432 515" fill="none" stroke="#c98d6d" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- small flag pin -->
+  <circle cx="360" cy="695" r="24" fill="#ffb268"/>
+  <circle cx="360" cy="695" r="23" fill="none" stroke="#d7d7d7" stroke-width="2"/>
+  <path d="M347 682 L347 707 L390 695 Z" fill="#f58220"/>
+  <path d="M347 682 L347 707 L390 695 Z" fill="#ffffff" opacity="0.6"/>
+  <path d="M347 682 L347 707 L390 695 Z" fill="#0a9b3d" opacity="0.85"/>
+  <path d="M347 682 L347 707 L390 695 Z" fill="#0a9b3d" opacity="0.6"/>
+  <path d="M347 682 L347 707 L390 695 Z" fill="#ffffff" opacity="0.7"/>
+
+  <!-- subtle portrait shading -->
+  <ellipse cx="275" cy="350" rx="30" ry="52" fill="#d4a27d" opacity="0.12"/>
+  <ellipse cx="445" cy="350" rx="30" ry="52" fill="#d4a27d" opacity="0.12"/>
+</svg>
